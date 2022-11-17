@@ -1,0 +1,247 @@
+<?php
+
+require 'configuracion/db.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT id, nombre, precio FROM productos WHERE activo=1");
+$sql->execute();
+$resultado = $sql->fetchALL(PDO::FETCH_ASSOC);
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo de Santa Barbara</title>
+
+    <link rel="stylesheet" href="catalogo.css">
+    <script src="js/catalogo.js"></script>
+</head>
+<body>
+    
+    <div id="menu">
+        <h1>Santa Barbara</h1>
+        <input type="radio" name="filtro" id="todos" checked="yes">
+        <label for="todos">Todos</label>
+
+        <input type="radio" name="filtro" id="remeras">
+        <label for="remeras">Remeras</label>
+
+        <input type="radio" name="filtro" id="pantalones">
+        <label for="pantalones">Pantalones</label>
+
+        <input type="radio" name="filtro" id="camperas">
+        <label for="camperas">Camperas</label>
+
+        <input type="radio" name="filtro" id="bermudas">
+        <label for="bermudas">Bermudas</label>
+        
+        <div id="productos">
+            <div  class="remera">
+                <section>
+                    <img src="img-santa/camisetaDeportivaDosColores.jpg" class="remera">
+                </section>
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="remera">
+                <section>
+                    <img src="img-santa/camisetaDiseñoDelantero.jpg" class="remera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="remera">
+                <section>
+                    <img src="img-santa/camisetaDiseñoTrasero.jpg" class="remera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="remera">
+                <section>
+                    <img src="img-santa/camisetaDosColores.jpg" class="remera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="pantalon">
+                <section>
+                    <img src="img-santa/pantalonBeig.jpg" class="pantalon">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="pantalon">
+                <section>
+                    <img src="img-santa/pantalonMostaza.jpg" class="pantalon">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+            <div  class="pantalon">
+                <section>
+                    <img src="img-santa/pantalonVerde.jpg" class="pantalon">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>      
+            <div  class="campera">
+                <section>
+                    <img src="img-santa/camperaRoja.jpg" class="campera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>      
+            <div  class="campera">
+                <section>
+                    <img src="img-santa/camperaRojoVino.jpg" class="campera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>      
+            <div  class="campera">
+                <section>
+                    <img src="img-santa/camperaTresColores.jpg" class="campera">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>   
+            <div  class="bermuda">
+                <section>
+                    <img src="img-santa/bermudaBeig.jpg" class="bermuda">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>        
+            <div  class="bermuda">
+                <section>
+                    <img src="img-santa/bermudaMarron.jpg" class="bermuda">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>    
+            <div  class="bermuda">
+                <section>
+                    <img src="img-santa/bermudaVerde.jpg" class="bermuda">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>    
+            <div  class="bermuda">
+                <section>
+                    <img src="img-santa/bermudaPlayeraAmarrilla.jpg" class="bermuda">
+                <div class="cuerpo">
+                    <h5>Camiseta Color Beige</h5>
+                    <p>$500,00</p>
+                    <div class="botones">
+                        <div class="detalles">
+                            <a href="#" class="mas-info">Detalles</a>
+                        </div>
+                        <a href="#" class="agregar">Agregar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
