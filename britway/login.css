@@ -1,0 +1,83 @@
+body {
+    background-image: url(img/gorras.jpg);
+    font-family: sans-serif;
+    height: 100vh;
+  }
+ 
+  .login-box {
+    width: 500px;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    border-radius: 15px;
+  }
+ 
+  .login-box .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+  }
+  .login-box h1 {
+    margin: 0;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+ 
+  .login-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+ 
+  .login-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+ 
+  .login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"] {
+    border: none;
+    border-bottom: 1px solid rgb(236, 0, 0);
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+  }
+ 
+  .login-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #352d9e;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+ 
+  .login-box input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ff0000;
+    color: rgb(253, 252, 252);
+  }
+ 
+  .login-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(23, 23, 24, 0.562);
+  }
+ 
+  .login-box a:hover {
+    color: rgba(0, 0, 0, 0.705);
+  }

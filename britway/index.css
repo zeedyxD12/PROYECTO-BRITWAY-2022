@@ -1,0 +1,325 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25;}
+ul{list-style: none;}
+li{font-size: 1.25em;}
+
+.boton{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 31, 31);
+    box-shadow: 2px 2px 10px rgb(88, 87, 87);
+    color: aliceblue;
+    background-color: rgb(226, 43, 202);
+}
+
+.botoncio{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(32, 31, 31);
+    box-shadow: 2px 2px 10px rgb(88, 87, 87);
+    color: rgb(255, 250, 250);
+    background-color: red;
+}
+
+.botoncio:hover{
+    color: rgb(12, 8, 231);
+}
+
+.boton:hover{
+    background-color: rgb(248, 3, 3);
+}
+
+.contenedor{
+    max-width: 1400px;
+    margin: auto;
+}
+
+.color-acento{color: blueviolet;}
+
+header{
+    background-color: whitesmoke;
+
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 1.6em;
+}
+
+.logo:hover{
+    transform: translate3d(-100%);
+}
+
+header .contenedor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+header a:hover{
+    color: rgb(194, 101, 181);
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url("img/fondo_hero.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+} 
+
+#hero h1{
+    color: whitesmoke;
+}
+
+#info .contenedor{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#productos{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#productos .contenedor{
+    padding: 100px;
+}
+
+#productos h2{
+    margin-top: 0;
+    font-size: 6vh;
+}
+
+#productos p{
+    display: none;
+}
+
+#productos .apartados{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.apartados:hover{
+    transform: translateY(-3%);
+}
+
+.apartados:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url("img/camiseta-logo.jpg");
+}
+
+.apartados:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url("img/campera-logo.jpg");
+}
+
+.apartados:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ) 
+    ,url("img/pantalon-logo.jpg");
+}
+
+#contacto .contenedor{
+    text-align: center;
+    padding: 40px 12px;
+}
+
+#contacto li{
+    margin: 15px 0px;
+    font-weight: bold;
+}
+
+#contacto h3{
+    text-align: center;
+    font-size: 2em;
+    padding-top: 3em;
+}
+
+#contacto a{
+    font-size: 1.5em;
+    text-decoration-line:none;
+    font-weight: bold;
+    color: blue;
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100, 100, 100);
+}
+
+footer .contenedor{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #info .contenedor{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #info .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding: 0px 30px;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #info .img-conteiner{
+        background-image:url("img/enigma.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #productos .producto{
+        display: flex;
+        justify-content: center;
+    }
+
+    #productos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #productos h3{
+        margin-top: 0;
+    }
+
+    #productos .apartados{
+        padding: 50px;
+        background-size: 400px 255px;
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-color: rgb(50, 50, 50);
+        box-shadow: 2px 2px 10px rgba(122, 120, 120, 0.5);
+    }
+
+    .apartados:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ) 
+        ,url("img/camiseta-logo.jpg");
+    }
+    
+    .apartados:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ) 
+        ,url("img/campera-logo.jpg");
+    }
+    
+    .apartados:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ) 
+        ,url("img/pantalon-logo.jpg");
+    }
+
+    footer .contenedor{
+        height: 150px;
+        display: flex;
+        justify-content: right;
+        align-items: flex-end;
+    }
+
+}
